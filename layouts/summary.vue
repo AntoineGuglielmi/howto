@@ -1,8 +1,7 @@
 <template>
   <div id="topic__main">
     <div class="container maxw">
-      <Atoms-Text-H1 :home="false">Sommaire</Atoms-Text-H1>
-      <Molecules-Nav/>
+      <Nuxt />
     </div>
   </div>
 </template>
