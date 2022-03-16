@@ -1,7 +1,5 @@
 const globImporter = require('node-sass-glob-importer');
 export default {
-  target: 'server',
-
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'howto',
