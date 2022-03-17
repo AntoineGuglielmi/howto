@@ -1,7 +1,9 @@
 <template>
   <div>
     <Atoms-Text-H1>{{ titre }}</Atoms-Text-H1>
-    <component :is="component" v-bind="topic"></component>
+    <transition name="fade" mode="out-in">
+      <component :is="component" v-bind="topic"></component>
+    </transition>
   </div>
 </template>
 
@@ -28,5 +30,21 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+.fade-enter-active,
+.fade-leave-active
+  transition: 0.25s ease-in-out
+  transition-property: opacity, transform
 
+.fade-enter
+  opacity: 0
+  transform: translateX(-10px)
+
+.fade-enter-to,
+.fade-leave
+  opacity: 1
+  transform: translateX(0)
+
+.fade-leave-to
+  opacity: 0
+  transform: translateX(10px)
 </style>

@@ -31,5 +31,15 @@ export const TOPICS = [
     id: 6,
     titre: 'Store',
     slug: 'store'
+  },
+  {
+    id: 7,
+    titre: 'Axios & proxy',
+    slug: 'axios-proxy'
+  },
+  {
+    id: 8,
+    titre: 'Plugins',
+    slug: 'plugins'
   }
 ];
