@@ -12,7 +12,7 @@
 
   proxy: {
     '/api/': {
-      // Replace [::1] by localhost if it doesn't work and modify the port if needed
+      // Switch between [::1] and localhost if it doesn't work and modify the port if needed
       target: 'http://[::1]:8181',
       pathRewrite: {'^/api/': '/'},
       changeOrigin: true

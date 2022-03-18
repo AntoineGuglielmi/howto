@@ -14,7 +14,9 @@ export const getters = {
 };
 
 export const actions = {
-    
+  async nuxtServerInit({ commit, dispatch }) {
+    // ...
+  }
 };</Atoms-Code-Pre>
   </div>
 </template>

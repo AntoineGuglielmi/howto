@@ -3,4 +3,5 @@ export const TOPICS_CATEGORIES = {
   [TOPICS_TYPES.NUXT_FEATURES]: 'Nuxt',
   [TOPICS_TYPES.STYLE]: 'Style',
   [TOPICS_TYPES.TYPO]: 'Typographie',
+  [TOPICS_TYPES.PLOUP]: 'Ploup',
 };

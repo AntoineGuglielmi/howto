@@ -1,15 +1,7 @@
 <template>
   <div>
-    <p>Put the following in the package.json file :</p>
-    <Atoms-Code-Pre :file="'package.json'">{
-  ...
-  "scripts": {
-    ...
-    "d": "nuxt --hostname '0' --port 1234",
-    ...
-  },
-  ...
-}</Atoms-Code-Pre>
+    <p>Add the following in the package.json file scripts :</p>
+    <Atoms-Code-Pre :file="'package.json'">"d": "nuxt --hostname '0' --port 1234"</Atoms-Code-Pre>
     <p>Replace d or 1234 by other values if needed.</p>
     <p>Usage :</p>
     <button @click="switchSudo">Turn sudo <span>{{ sudoMode }}</span></button>

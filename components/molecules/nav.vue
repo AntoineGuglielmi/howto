@@ -21,22 +21,25 @@ import {TOPICS_TYPES} from '@/constants/topicsTypes';
 export default {
   computed: {
     navHarchitecture() {
+      // Get raw topics
       const topics = this.$store.getters.getTopics;
-      console.log(TOPICS_CATEGORIES);
+      // Initiate the nav structure to empty object
       const navHarchitecture = {};
+      // For each TOPICS_TYPES, create a empty array in navHarchitecture
       for(const[k,v] of Object.entries(TOPICS_TYPES)) {
           navHarchitecture[v] = [];
       }
-      // TOPICS_TYPES.forEach(type => {
-      //   if(!(topicCategory in navHarchitecture)) {
-      //     navHarchitecture[type] = [];
-      //   }
-      // });
+      // For each topic, add topic in corresponding type array
       topics.forEach(topic => {
-        // const topicCategory = TOPICS_CATEGORIES[topic.type];
-        const topicCategory = topic.type;
-        navHarchitecture[topicCategory].push(topic);
+        navHarchitecture[topic.type].push(topic);
       });
+      // If a type array is empty, is deleted
+      for(const[k,v] of Object.entries(navHarchitecture)) {
+        if(v.length === 0) {
+          delete navHarchitecture[k];
+        }
+      }
+      
       return navHarchitecture;
     },
     categories() {
