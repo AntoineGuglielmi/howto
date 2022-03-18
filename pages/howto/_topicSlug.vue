@@ -26,9 +26,13 @@ export default {
     component() {
       return () => import(`@/components/pages/${this.componentName}.vue`);
     }
+  },
+  methods: {
+    
   }
 }
 </script>
+
 <style lang="sass" scoped>
 .fade-enter-active,
 .fade-leave-active

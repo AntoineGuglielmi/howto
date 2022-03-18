@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import DefaultPage from './page.vue';
+import BaseTopic from './base-topic.vue';
 export default {
-  extends: DefaultPage,
+  extends: BaseTopic,
   computed: {
     topics() {
       return this.$store.getters.getTopics;

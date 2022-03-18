@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import DefaultPage from './page.vue';
+import BaseTopic from './base-topic.vue';
 export default {
-  extends: DefaultPage,
+  extends: BaseTopic,
   data() {
     return {};
   },

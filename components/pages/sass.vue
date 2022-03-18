@@ -47,21 +47,10 @@ export default {
 </template>
 
 <script>
-import DefaultPage from './page.vue';
+import BaseTopic from './base-topic.vue';
 export default {
-  extends: DefaultPage,
-  data() {
-    return {
-      sudo: true
-    };
-  },
+  extends: BaseTopic,
   computed: {
-    displaySudo() {
-      return this.sudo ? 'sudo ' : '';
-    },
-    sudoMode() {
-      return !this.sudo ? 'ON' : 'OFF';
-    },
     dirsProps() {
       return {
         copy: false
@@ -71,11 +60,6 @@ export default {
       return {
         copy: false
       }
-    }
-  },
-  methods: {
-    switchSudo() {
-      this.sudo = !this.sudo;
     }
   }
 };
