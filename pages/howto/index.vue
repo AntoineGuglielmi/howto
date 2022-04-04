@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import {fireDb} from '~/plugins/firebase.js';
 export default {
   layout: 'summary',
   // data() {

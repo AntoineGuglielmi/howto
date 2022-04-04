@@ -1,5 +1,4 @@
 import {TOPICS} from '@/constants/topics.js';
-// import {fireDb} from '~/plugins/firebase.js';
 export const state = () => ({
   topics: TOPICS
   // topics: []
@@ -26,6 +25,8 @@ export const actions = {
     // const topics = topicsCollection.docs.map(doc => doc.data());
     // commit('setTopics', {topics});
     const budgets = await this.$axios.$get('/api/budgets');
-    console.log(budgets)
+    budgets.forEach(budget => {
+      console.log(budget.name)
+    })
   }
 };

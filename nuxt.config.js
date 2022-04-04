@@ -27,7 +27,6 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/firebase.js',
     '~/plugins/antoine.js'
   ],
 
@@ -61,7 +60,7 @@ export default {
     '/api/': {
       // Switch between [::1] and localhost if it doesn't work and modify the port if needed
       // target: 'http://localhost:8181',
-      target: 'http://[::1]:8181',
+      target: 'http://[::1]:8181/api',
       pathRewrite: {'^/api/': '/'},
       changeOrigin: true
     }
