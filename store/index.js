@@ -21,12 +21,6 @@ export const getters = {
 
 export const actions = {
   async nuxtServerInit({ commit, dispatch }) {
-    // const topicsCollection = await fireDb.collection('topics').get()
-    // const topics = topicsCollection.docs.map(doc => doc.data());
-    // commit('setTopics', {topics});
-    const budgets = await this.$axios.$get('/api/budgets');
-    budgets.forEach(budget => {
-      console.log(budget.name)
-    })
+    
   }
 };
